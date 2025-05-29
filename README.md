@@ -1,31 +1,52 @@
-# MySongList
+# 🎵 MySongList 🎧  
+_Aplikasi Web Catatan Lagu Favorit_
 
-## Deskripsi Aplikasi Web
-**MySongList** adalah aplikasi web sederhana yang memungkinkan pengguna untuk mencatat daftar lagu favorit mereka secara personal. Aplikasi ini dilengkapi dengan sistem autentikasi pengguna sehingga setiap data lagu tersimpan sesuai identitas user masing-masing.
+![mysonglist-banner](https://img.freepik.com/premium-vector/music-note-icon-flat-vector-illustration_585024-17.jpg?w=996) <!-- Ganti dengan gambar banner sendiri kalau ada -->
 
-## Dependensi Paket (Library)
-### Backend (Python - Pyramid)
-- pyramid
-- pyramid_jwt
-- sqlalchemy
-- passlib
-- jwt
-- waitress
-- psycopg2-binary
+---
 
-### Frontend (React)
-- react
-- react-router-dom
-- axios
-- tailwindcss
+## 📌 Deskripsi Singkat
 
-## Fitur pada Aplikasi
-- Register dan Login pengguna (autentikasi JWT)
-- Tambah lagu (judul & artis)
-- Tampilkan semua lagu milik user
-- Hapus lagu dari daftar
+**MySongList** adalah aplikasi web sederhana untuk mencatat daftar lagu favorit. Aplikasi ini dirancang menggunakan arsitektur fullstack dengan backend **Python Pyramid + PostgreSQL**, dan frontend **React.js**.
 
-## Referensi
-- [Dokumentasi Pyramid](https://docs.pylonsproject.org/projects/pyramid/en/latest/)
-- [React Documentation](https://reactjs.org/)
-- [PostgreSQL](https://www.postgresql.org/)
+---
+
+## 🚀 Fitur Aplikasi
+
+✅ Autentikasi pengguna (Register & Login dengan JWT)  
+✅ Tambah lagu (judul dan artis)  
+✅ Lihat daftar lagu milik user  
+✅ Hapus lagu dari daftar  
+
+> Semua data bersifat personal per user dan aman karena dilindungi oleh sistem token JWT.
+
+---
+
+## 📦 Dependensi Utama
+
+### 🔧 Backend - Python (Pyramid)
+- `pyramid`
+- `pyramid_jwt`
+- `sqlalchemy`
+- `passlib`
+- `jwt`
+- `waitress`
+- `psycopg2-binary`
+
+### 🎨 Frontend - React
+- `react`
+- `react-router-dom`
+- `axios`
+- `tailwindcss`
+
+---
+
+## 🧪 Cara Menjalankan Aplikasi
+
+### 🔙 Backend
+```bash
+cd mysonglist-backend
+python -m venv env
+source env/bin/activate # atau .\env\Scripts\activate di Windows
+pip install -e .
+pserve development.ini --reload
