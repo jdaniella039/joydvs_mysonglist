@@ -1,52 +1,43 @@
-# 🎵 MySongList 🎧  
-_Aplikasi Web Catatan Lagu Favorit_
+# 🎵 MySongList – Aplikasi Manajemen Daftar Lagu
 
-![mysonglist-banner](https://img.freepik.com/premium-vector/music-note-icon-flat-vector-illustration_585024-17.jpg?w=996) <!-- Ganti dengan gambar banner sendiri kalau ada -->
+## 📝 Deskripsi Aplikasi Web
+**MySongList** adalah aplikasi web yang memungkinkan pengguna untuk:
+- Mendaftarkan akun dan login
+- Menambahkan lagu favorit ke daftar pribadi
+- Melihat daftar lagu yang telah ditambahkan
+- Menghapus lagu dari daftar
 
----
+Aplikasi ini dibangun sebagai bagian dari Tugas Besar Pemrograman Web dengan arsitektur fullstack: backend menggunakan **Python Pyramid** dan frontend menggunakan **React.js**.
 
-## 📌 Deskripsi Singkat
+## 📦 Dependensi Paket (Library)
+Berikut adalah dependensi utama yang digunakan dalam aplikasi ini:
 
-**MySongList** adalah aplikasi web sederhana untuk mencatat daftar lagu favorit. Aplikasi ini dirancang menggunakan arsitektur fullstack dengan backend **Python Pyramid + PostgreSQL**, dan frontend **React.js**.
-
----
-
-## 🚀 Fitur Aplikasi
-
-✅ Autentikasi pengguna (Register & Login dengan JWT)  
-✅ Tambah lagu (judul dan artis)  
-✅ Lihat daftar lagu milik user  
-✅ Hapus lagu dari daftar  
-
-> Semua data bersifat personal per user dan aman karena dilindungi oleh sistem token JWT.
-
----
-
-## 📦 Dependensi Utama
-
-### 🔧 Backend - Python (Pyramid)
+### Backend (Python + Pyramid)
 - `pyramid`
 - `pyramid_jwt`
-- `sqlalchemy`
 - `passlib`
-- `jwt`
-- `waitress`
+- `sqlalchemy`
 - `psycopg2-binary`
+- `waitress`
 
-### 🎨 Frontend - React
+### Frontend (React)
 - `react`
+- `react-dom`
 - `react-router-dom`
 - `axios`
 - `tailwindcss`
 
----
+> Semua dependensi lengkap dapat dilihat di file `requirements.txt` (backend) dan `package.json` (frontend).
 
-## 🧪 Cara Menjalankan Aplikasi
+## ⚙️ Fitur pada Aplikasi
+- 🔐 **Register dan Login User** dengan sistem token JWT
+- 📄 **CRUD Lagu**: Membuat, melihat, memperbarui dan menghapus lagu dalam daftar
+- ✅ **Proteksi endpoint** (hanya user login yang bisa akses daftar lagu)
+- 🔎 **Pencarian Lagu** berdasarkan judul atau artis (opsional jika sudah)
+- 🎨 **Tampilan Responsif** dengan React dan Tailwind CSS
 
-### 🔙 Backend
-```bash
-cd mysonglist-backend
-python -m venv env
-source env/bin/activate # atau .\env\Scripts\activate di Windows
-pip install -e .
-pserve development.ini --reload
+## 📚 Referensi
+- Dokumentasi Pyramid Framework: https://docs.pylonsproject.org/projects/pyramid/en/latest/
+- React Documentation: https://reactjs.org/docs/getting-started.html
+- Tailwind CSS: https://tailwindcss.com/docs/installation
+- JWT Auth: https://github.com/vallettea/pyramid_jwt
