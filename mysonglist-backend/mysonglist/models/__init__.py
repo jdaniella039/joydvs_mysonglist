@@ -1,10 +1,9 @@
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy import engine_from_config
-from sqlalchemy.orm import sessionmaker
-from .base import Base
+from sqlalchemy.orm import scoped_session, sessionmaker
 
+DBSession = scoped_session(sessionmaker())
 Base = declarative_base()
-DBSession = sessionmaker()
 
 def includeme(config):
     settings = config.get_settings()

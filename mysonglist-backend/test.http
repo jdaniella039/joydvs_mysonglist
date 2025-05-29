@@ -1,0 +1,53 @@
+### 1. CEK BACKEND
+GET http://localhost:6543/
+Accept: application/json
+
+###
+
+### 2. REGISTER USER (sekali aja)
+POST http://localhost:6543/register
+Content-Type: application/json
+
+{
+  "username": "admin",
+  "password": "123"
+}
+
+
+###
+
+### 3. LOGIN USER
+POST http://localhost:6543/login
+Content-Type: application/json
+
+{
+  "username": "admin",
+  "password": "123"
+}
+
+
+
+###
+
+### 4. GET SEMUA LAGU (PASTE TOKEN MANUAL DI BAWAH)
+GET http://localhost:6543/songs
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...<isi token hasil login>
+Accept: application/json
+
+###
+
+### 5. TAMBAH LAGU BARU
+POST http://localhost:6543/songs
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...<isi token hasil login>
+
+{
+  "title": "Fix You",
+  "artist": "Coldplay"
+}
+
+###
+
+### 6. HAPUS LAGU DENGAN ID 1
+DELETE http://localhost:6543/songs/1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...<isi token hasil login>

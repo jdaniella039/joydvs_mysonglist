@@ -38,7 +38,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV="C:\Users\HP\Downloads\mysonglist_backend_final_fixed\env"
+VIRTUAL_ENV="C:\DATA JOY\Tugas\SEM 6\PemWeb\TUBES\mysonglist-backend\env"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"

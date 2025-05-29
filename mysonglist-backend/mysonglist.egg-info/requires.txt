@@ -1,5 +1,6 @@
 pyramid
 pyramid_jwt
-sqlalchemy
 passlib
+sqlalchemy
+psycopg2-binary
 waitress
