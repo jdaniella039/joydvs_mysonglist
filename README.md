@@ -1,12 +1,43 @@
-# React + Vite
+# 🎵 MySongList – Aplikasi Manajemen Daftar Lagu
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 📝 Deskripsi Aplikasi Web
+**MySongList** adalah aplikasi web yang memungkinkan pengguna untuk:
+- Mendaftarkan akun dan login
+- Menambahkan lagu favorit ke daftar pribadi
+- Melihat daftar lagu yang telah ditambahkan
+- Menghapus lagu dari daftar
 
-Currently, two official plugins are available:
+Aplikasi ini dibangun sebagai bagian dari Tugas Besar Pemrograman Web dengan arsitektur fullstack: backend menggunakan **Python Pyramid** dan frontend menggunakan **React.js**.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 📦 Dependensi Paket (Library)
+Berikut adalah dependensi utama yang digunakan dalam aplikasi ini:
 
-## Expanding the ESLint configuration
+### Backend (Python + Pyramid)
+- `pyramid`
+- `pyramid_jwt`
+- `passlib`
+- `sqlalchemy`
+- `psycopg2-binary`
+- `waitress`
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Frontend (React)
+- `react`
+- `react-dom`
+- `react-router-dom`
+- `axios`
+- `tailwindcss`
+
+> Semua dependensi lengkap dapat dilihat di file `requirements.txt` (backend) dan `package.json` (frontend).
+
+## ⚙️ Fitur pada Aplikasi
+- 🔐 **Register dan Login User** dengan sistem token JWT
+- 📄 **CRUD Lagu**: Tambah, lihat, dan hapus lagu dalam daftar
+- ✅ **Proteksi endpoint** (hanya user login yang bisa akses daftar lagu)
+- 🔎 **Pencarian Lagu** berdasarkan judul atau artis (opsional jika sudah)
+- 🎨 **Tampilan Responsif** dengan React dan Tailwind CSS
+
+## 📚 Referensi
+- Dokumentasi Pyramid Framework: https://docs.pylonsproject.org/projects/pyramid/en/latest/
+- React Documentation: https://reactjs.org/docs/getting-started.html
+- Tailwind CSS: https://tailwindcss.com/docs/installation
+- JWT Auth: https://github.com/vallettea/pyramid_jwt
